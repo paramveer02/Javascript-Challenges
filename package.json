@@ -1,0 +1,11 @@
+{
+  "name": "js-challenges",
+  "version": "1.0.0",
+  "description": "This repository contains my solutions to coding challenges from the [Complete JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/) by Jonas Schmedtmann (Udemy).",
+  "main": "challenge-01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
