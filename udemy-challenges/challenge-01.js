@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'url';
+
 /*
 Coding Challenge #1
 
@@ -18,17 +20,28 @@ Test data:
 m tall.
 */
 
+const __filename = fileURLToPath(import.meta.url);
+
 const markHeight = 1.69;
 const markWeight = 78;
 
 const johnHeight = 1.95;
 const johnWeight = 92;
 
-const markBmi = markWeight / markHeight ** 2;
-const johnBmi = johnWeight / johnHeight ** 2;
+export const markBmi = markWeight / markHeight ** 2;
+export const johnBmi = johnWeight / johnHeight ** 2;
 
-console.log(`Mark's BMI: ${(markBmi.toFixed(2))}`)
-console.log(`John's BMI: ${(johnBmi.toFixed(2))}`)
+const markHigherBMI = markBmi > johnBmi;
 
-const markHigherBMI = markBmi > johnBmi
-console.log(markHigherBMI);
+// Reusability
+export const calculateBMI = function (weight, height) {
+    const bmi = weight / height ** 2;
+    return bmi;
+}
+
+// Only run this when file is executed directly
+if (process.argv[1] === __filename) {
+    console.log(`Mark's BMI: ${markBmi.toFixed(2)}`);
+    console.log(`John's BMI: ${johnBmi.toFixed(2)}`);
+    console.log(`Mark's BMI is higher: ${markHigherBMI}`);
+}
