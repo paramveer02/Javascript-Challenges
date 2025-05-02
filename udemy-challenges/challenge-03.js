@@ -22,3 +22,55 @@ Test data:
 § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 */
+
+const calcAverage = scores => scores.reduce((acc, curValue) => acc + curValue, 0) / scores.length;
+
+const checkWinner = (scoreDolphins, scoreKoalas) => {
+    const avgScoreDolphins = calcAverage(scoreDolphins);
+    const avgScoreKoalas = calcAverage(scoreKoalas);
+
+    console.log(`Dolphins Avg: ${avgScoreDolphins.toFixed(2)}`);
+    console.log(`Koalas Avg: ${avgScoreKoalas.toFixed(2)}`);
+
+    // Bonus 2 condition: Draw with min 100
+    if (avgScoreDolphins === avgScoreKoalas && avgScoreDolphins >= 100 && avgScoreKoalas >= 100) {
+        console.log("It's a draw! Both teams scored above 100 🏆");
+    }
+    // Bonus 1 condition: Winner must have >= 100
+    else if (avgScoreDolphins > avgScoreKoalas && avgScoreDolphins >= 100) {
+        console.log(`Dolphins win the trophy with ${avgDolphins.toFixed(2)} 🎉`);
+    } else if (avgScoreKoalas > avgScoreDolphins && avgScoreKoalas >= 100) {
+        console.log(`Koalas win the trophy with ${avgScoreKoalas.toFixed(2)} 🥳`);
+    } else {
+        console.log("No team wins the trophy. Score too low 😕");
+    }
+};
+
+// --- Test Data Sets ---
+
+const data1 = {
+    dolphins: [96, 108, 89],
+    koalas: [88, 91, 110],
+};
+
+const bonus1 = {
+    dolphins: [97, 112, 101],
+    koalas: [109, 95, 123],
+};
+
+const bonus2 = {
+    dolphins: [97, 112, 101],
+    koalas: [109, 95, 106],
+};
+
+console.log(`\nTest Data 1:`)
+checkWinner(data1.dolphins, data1.koalas)
+
+console.log(`\nBonus Test 1:`)
+checkWinner(bonus1.dolphins, bonus1.koalas)
+
+console.log(`\nBonus Test 2`)
+checkWinner(bonus2.dolphins, bonus2.koalas)
+
+
+
