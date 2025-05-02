@@ -27,3 +27,16 @@ const logBillSummary = bill => {
 console.log(logBillSummary(275));
 console.log(logBillSummary(40));
 console.log(logBillSummary(430));
+
+/*
+🔥 Extended Challenge: Tip calculator for multiple bills
+*/
+
+const processBills = bills => bills.map(logBillSummary);
+
+// --- Test Data
+const bills = [175, 20, 630, 225, 300, 50];
+
+const summaries = processBills(bills);
+console.log('\nSummary of Bills:')
+summaries.forEach(summary => console.log(summary));
