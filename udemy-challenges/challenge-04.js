@@ -32,7 +32,15 @@ console.log(logBillSummary(430));
 🔥 Extended Challenge: Tip calculator for multiple bills
 */
 
+// using arrow function
 const processBills = bills => bills.map(logBillSummary);
+
+// using function expression
+const processBillsFuncExp = function (bills) {
+    return bills.map(function (bill) {
+        return logBillSummary(bill)
+    })
+}
 
 // --- Test Data
 const bills = [175, 20, 630, 225, 300, 50];
