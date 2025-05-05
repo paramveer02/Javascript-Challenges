@@ -18,7 +18,7 @@ the function you created before
 Test data: 125, 555 and 44
 */
 
-const calcTip = bill => {
+export const calcTip = bill => {
     const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
     return tip;
 }
