@@ -1,6 +1,6 @@
 # JavaScript Coding Challenges 🚀
 
-![Jest Tests](https://github.com/paramveer02/js-challenges/actions/workflows/test.yml/badge.svg)
+![Jest Tests](https://github.com/paramveer02/js-challenges/actions/workflows/nodejs.yml/badge.svg)
 
 This repository contains my solutions to coding challenges from the [Complete JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/) by Jonas Schmedtmann (Udemy).
 
