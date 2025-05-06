@@ -15,3 +15,19 @@ Test data:
 § Data 1: [17, 21, 23]
 § Data 2: [12, 5, -5, 0, 4]
 */
+
+const tempReadings1 = [17, 21, 23];
+const tempReadings2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (temperatures) {
+    if (!temperatures) {
+        console.log('No temperature data available.')
+        return;
+    }
+    let forecastStr = '...';
+    temperatures.forEach((temp, ind) => {
+        forecastStr += `${temp}ºC in ${ind + 1} days...`
+    });
+    console.log(forecastStr)
+}
+printForecast(tempReadings1);
