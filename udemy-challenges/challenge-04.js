@@ -16,9 +16,9 @@ Test data:
 § Data 1: Test for bill values 275, 40 and 430
 */
 
-const calcTip = bill => bill >= 50 && bill <= 300 ? 0.15 * bill : 0.20 * bill;
+export const calcTip = bill => bill >= 50 && bill <= 300 ? 0.15 * bill : 0.20 * bill;
 
-const logBillSummary = bill => {
+export const logBillSummary = bill => {
     const tip = calcTip(bill);
     const total = bill + tip
     return `The bill was ${bill}, the tip was ${tip.toFixed(2)}, and the total value ${total.toFixed(2)}`;
@@ -36,7 +36,7 @@ console.log(logBillSummary(430));
 const processBills = bills => bills.map(logBillSummary);
 
 // using function expression
-const processBillsFuncExp = function (bills) {
+export const processBillsFuncExp = function (bills) {
     return bills.map(function (bill) {
         return logBillSummary(bill)
     })

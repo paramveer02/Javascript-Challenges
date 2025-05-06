@@ -14,7 +14,7 @@ BMI (28.3) is higher than John's (23.9)!"
 
 
 // Function to compare BMIs and print who is higher
-const higherBMI = function (markBmi, johnBmi) {
+export const higherBMI = function (markBmi, johnBmi) {
     markBmi > johnBmi ?
         console.log(`Mark's BMI (${markBmi.toFixed(2)}) is higher than John's (${johnBmi.toFixed(2)})!`) :
         console.log(`John's BMI (${johnBmi.toFixed(2)}) is higher than Mark's (${markBmi.toFixed(2)})!`)

@@ -23,9 +23,9 @@ Test data:
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 */
 
-const calcAverage = scores => scores.reduce((acc, curValue) => acc + curValue, 0) / scores.length;
+export const calcAverage = scores => scores.reduce((acc, curValue) => acc + curValue, 0) / scores.length;
 
-const checkWinner = (scoreDolphins, scoreKoalas) => {
+export const checkWinner = (scoreDolphins, scoreKoalas) => {
     const avgScoreDolphins = calcAverage(scoreDolphins);
     const avgScoreKoalas = calcAverage(scoreKoalas);
 

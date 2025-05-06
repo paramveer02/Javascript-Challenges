@@ -24,12 +24,12 @@ Test data:
 § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 */
 
-const calcAverage = scores => {
+export const calcAverage = scores => {
     const avg = scores.reduce((acc, curValue) => acc + curValue, 0) / scores.length;
     return avg;
 }
 
-const checkWinner = (avgDolphins, avgKoalas) => {
+export const checkWinner = (avgDolphins, avgKoalas) => {
     if (avgDolphins >= 2 * avgKoalas) {
         console.log(`Dolphins win (${avgDolphins.toFixed(2)} vs. ${avgKoalas.toFixed(2)})`);
     } else if (avgKoalas >= 2 * avgDolphins) {
