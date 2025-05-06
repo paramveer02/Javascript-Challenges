@@ -1,5 +1,7 @@
 # JavaScript Coding Challenges 🚀
 
+![Jest Tests](https://github.com/paramveer02/js-challenges/actions/workflows/test.yml/badge.svg)
+
 This repository contains my solutions to coding challenges from the [Complete JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/) by Jonas Schmedtmann (Udemy).
 
 As a self-taught developer, I completed the course and am solving these challenges independently to practice JavaScript, HTML, CSS, DOM manipulation, and advanced concepts.
@@ -8,7 +10,7 @@ As a self-taught developer, I completed the course and am solving these challeng
 
 ## 📂 Folder Structure
 
-- `/challenges`: Each coding challenge is in a separate file (`challenge-01.js`, `challenge-02.js`, etc.).
+- `/udemy-challenges`: Each coding challenge is in a separate file (`challenge-01.js`, `challenge-02.js`, etc.).
 - Each file includes:
   - The **problem description** (commented at the top)
   - My **solution** below the description
