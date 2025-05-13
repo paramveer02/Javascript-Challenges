@@ -59,7 +59,7 @@ console.log(scorers)
 
 // as a reusable function: using reduce() to create a new object
 
-const getScorersMap = function (scorerArray) {
+export const getScorersMap = function (scorerArray) {
     return scorerArray.reduce((obj, player) => {
         obj[player] = (obj[player] || 0) + 1;
         return obj;
