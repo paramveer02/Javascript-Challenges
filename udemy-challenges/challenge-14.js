@@ -21,3 +21,26 @@ someVariable ✅✅✅
 calculateAge ✅✅✅✅
 delayedDeparture ✅✅✅✅✅
 */
+
+document.body.append(document.createElement("textarea"));
+const btn = document.createElement("button");
+btn.textContent = "Convert to camelCase";
+document.body.append(btn);
+
+btn.addEventListener("click", function () {
+  const input = document.querySelector("textarea").value;
+  console.log(input);
+  const lines = input.split("\n");
+
+  lines.forEach((line, index) => {
+    const trimmed = line.trim().toLowerCase();
+    const camel = trimmed
+      .split("_")
+      .map((word, ind) => {
+        return ind === 0 ? word : word[0].toUpperCase() + word.slice(1);
+      })
+      .join("");
+    const formatted = camel.padEnd(20) + "✅".repeat(index + 1);
+    console.log(formatted);
+  });
+});
