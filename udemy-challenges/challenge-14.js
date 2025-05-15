@@ -29,7 +29,6 @@ document.body.append(btn);
 
 btn.addEventListener("click", function () {
   const input = document.querySelector("textarea").value;
-  console.log(input);
   const lines = input.split("\n");
 
   lines.forEach((line, index) => {
