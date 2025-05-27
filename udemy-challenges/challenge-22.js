@@ -60,7 +60,10 @@ CarEv.prototype.accelerate = function () {
 };
 
 const tesla = new CarEv("Tesla", 120, 23);
+const swift = new Car("Maruti", 50);
+
 tesla.accelerate();
+swift.accelerate();
 tesla.brake();
 tesla.chargeBattery(100);
 tesla.accelerate();
