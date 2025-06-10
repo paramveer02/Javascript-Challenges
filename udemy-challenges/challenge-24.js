@@ -1,7 +1,7 @@
 /*
 Asynchronous JavaScript
 
-Coding Challenge #1
+Coding Challenge #24
 
 In this challenge you will build a function 'whereAmI' which renders a country only based on GPS coordinates. For that, you will use a second API to geocode coordinates. So in this challenge, you’ll use an API on your own for the first time �
 Your tasks:
